@@ -1,0 +1,20 @@
+<!-- This button will Display the Recipe -->
+<div class="row">
+    <div class="col-xs-12">
+        <!-- Add (click) event to Add New Recipe -->
+        <button class="btn btn-success" (click)="onNewRecipe()">New Recipe</button>
+    </div>
+</div>
+<hr>
+<!-- - This will Display the Recipe  -->
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- This Part -->
+            <!-- // Add index to Load the Different Recipes by Click -->
+            <app-recipe-item 
+            *ngFor="let recipeEl of recipes; let i = index" 
+            [recipe]="recipeEl"
+            [index]="i" 
+            ></app-recipe-item>
+        </div>
+    </div>

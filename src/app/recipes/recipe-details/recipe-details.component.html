@@ -1,0 +1,53 @@
+<!-- IMAGE -->
+<div class="row">
+    <div class="col-xs-12">
+        <img
+        [src]="recipe.imagePath"
+        alt="{{ recipe.name }}"
+        class="img-responsive"
+        style="max-height: 300px;"
+        >
+    </div>
+</div>
+
+<!-- NAME -->
+<div class="row">
+    <div class="col-xs-12">
+        <h2>{{ recipe.name }}</h2>
+    </div>
+</div>
+
+<!-- Buttons to Manage Recipe -->
+<div class="row">
+    <div class="col-xs-12">
+        <div class="recipe-options">
+            <!-- Dropdown Arrow -->
+            <button style="cursor: pointer;" class="btn btn-secondary dropdown-toggle" id="dropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Manage Recipe</button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a (click)="onAddToShoppingList()" class="dropdown-item" style="cursor: pointer;">To Shopping List</a></li>
+                <li><a class="dropdown-item" style="cursor: pointer;"  (click)="onEditRecipe()">Edit</a></li>
+                <li><a class="dropdown-item" style="cursor: pointer;" (click)="onDeleteRecipe()">Delete</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<hr>
+<!-- Description -->
+<div class="row">
+    <div class="col-xs-12">
+        {{ recipe.description }}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <!-- This will Display the INGREDIENTS -->
+        <ul class="list-group">
+            <li class="list-group-item"
+            *ngFor="let ingredient of recipe.ingredients">
+            <!-- Using String Interpolation Display Name and Amount -->
+            {{ ingredient.name }} - {{ ingredient.amount }}
+            </li>
+        </ul>
+    </div>
+</div>

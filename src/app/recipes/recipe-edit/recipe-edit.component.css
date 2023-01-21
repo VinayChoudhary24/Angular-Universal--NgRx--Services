@@ -1,0 +1,11 @@
+.btn-danger {
+    margin-left: 10px;
+}
+
+/* This will Make Sure that the whole Form is not getting the Red Color,
+ -- input.ng-invalid, Make Sure only invalid input filed gets the Red Color,
+ -- .ng-touched, Make Sure that the Red Color is Only Shown after the USER has Touched the FORM and Not before that */
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+    border: 1px solid red;
+}

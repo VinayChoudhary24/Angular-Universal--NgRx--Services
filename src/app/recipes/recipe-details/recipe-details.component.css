@@ -1,0 +1,13 @@
+/* The Dropdown Menu */
+.dropdown-menu {
+  display: none;
+}
+
+/* The DropDown Container */
+.recipe-options:hover .dropdown-menu {
+  display: block;
+  z-index: 10;
+  cursor: pointer;
+  width: 100px;
+  /* position: absolute; */
+}

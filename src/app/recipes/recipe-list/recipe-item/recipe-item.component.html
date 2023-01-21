@@ -1,0 +1,24 @@
+<!-- <app-recipe-item></app-recipe-item> -->
+<!-- We Use *ngFor to Replicate/Loop through the Items  -->
+
+<!-- ## Pass the [routeriLink] in ARRAY[] to configure different Segments of the Paths i.e All different recipes in the List -->
+<!-- Add routerLinkActive to Mark/Style/Show the Active Class -->
+<a style="cursor: pointer;"
+   [routerLink]="[index]"
+   routerLinkActive="active"
+   class="list-group-item clearfix" >
+     <div class="pull-left">
+        <!-- We Use STRING INTERPOLATION to Output our recipe -->
+        <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+        <p class="list-group-item-text">{{ recipe.description }}</p>
+     </div>
+     <span class="pull-right">
+        <!-- src="{{ recipe.imagePath }}" -->
+        <img 
+        [src]="recipe.imagePath"
+        alt="{{ recipe.name }}" 
+        class="img-responsive" 
+        style="max-height: 50px;" 
+        >
+     </span>
+</a>

@@ -1,0 +1,20 @@
+<!--This is Rendering the Header Component  -->
+<!-- Here we Listen to The Eventemitter From the header.component.ts with the Help of ($event) -->
+<!-- After routing we dont need this -->
+<!-- <app-header (featureSelected)="onNavigate($event)"></app-header> -->
+
+<app-header></app-header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Add <router-outlet> to Render the Routes -->
+                <router-outlet></router-outlet>
+
+            <!-- Now, we Use router-outlet to Render Routes -->
+            <!-- <app-recipes *ngIf="loadedFeatue === 'recipe'"></app-recipes>
+            
+            <app-shopping-list *ngIf="loadedFeatue !== 'recipe'"></app-shopping-list> -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<!-- This Section Contains the Shopping Edit and The List -->
+<div class="row">
+    <div class="col-xs-10">
+        <app-shopping-edit></app-shopping-edit>
+        <hr>
+        <!-- THE LIST  -->
+        <ul class="list-group">
+            <a class="list-group-item" 
+            style="cursor: pointer"
+            *ngFor="let ingredient of (ingredients | async).ingredients; let i = index"
+            (click)="onEditItem(i)"
+            >
+            <!-- This will Display the Ingrediesnt Name and Amount -->
+        {{ ingredient.name }} ({{ ingredient.amount }})
+            </a>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+/* This Container Containers left and Right Side Options */
+.container {
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* the Recipe and Shopping List  */
+.nav {
+  /* border: 1px solid red; */
+  display: flex;
+  flex: 0.3;
+  justify-content: space-evenly;
+}
+
+.nav a {
+  text-decoration: none;
+  color: brown;
+}
+
+/* the Logout and DropDown Container/List */
+.user-details {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.user-details li {
+  margin: 0px 10px 0px 50px;
+}
+
+/* The Dropdown Menu */
+.dropdown-menu {
+  display: none;
+}
+
+/* The DropDown Container */
+.user-menu:hover .dropdown-menu {
+  display: block;
+  z-index: 10;
+  cursor: pointer;
+  width: 100px;
+  /* position: absolute; */
+}

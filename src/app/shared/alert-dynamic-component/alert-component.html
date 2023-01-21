@@ -1,0 +1,8 @@
+<!-- By attaching (click)="onClose()" will make sure, when clicked anywhere in background it will close the alert-box -->
+<div class="backdrop" (click)="onClose()"></div>
+<div class="alert-box">
+    <p>{{ message }}</p>
+    <div class="alert-box-actions">
+        <button class="btn btn-primary" (click)="onClose()">Close</button>
+    </div>
+</div>
